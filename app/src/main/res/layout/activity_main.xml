@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="timer"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"/>
+    <TextView
+        android:id="@+id/tv_correct_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="correct answer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16sp"
+        android:textSize="25sp"/>
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_option_three"
+        app:layout_constraintTop_toBottomOf="@id/tv_timer"
+        android:textSize="@dimen/tv_question_size"/>
+    <TextView
+        android:id="@+id/tv_option_one"
+        android:text="TextView"
+        android:onClick="onClickAnsWer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/text_option_two"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/bg_tv_options" />
+
+    <TextView
+        android:id="@+id/text_option_two"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:gravity="center"
+        android:onClick="onClickAnsWer"
+
+        android:textSize="@dimen/text_option_size"
+        android:background="@color/purple_200"
+        android:padding="@dimen/padding_inside_tv"
+        app:layout_constraintStart_toEndOf="@id/tv_option_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/tv_option_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/tv_option_four"
+        android:text="TextView"
+        android:onClick="onClickAnsWer"
+        android:textSize="@dimen/text_option_size"
+        android:textColor="@color/white"
+        android:background="@color/teal_200"
+        android:padding="@dimen/padding_inside_tv"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tv_option_one"
+        app:layout_constraintBottom_toTopOf="@+id/tv_option_one"/>
+       <TextView
+           android:id="@+id/tv_option_four"
+           android:layout_width="0dp"
+           android:onClick="onClickAnsWer"
+           android:layout_height="wrap_content"
+           android:text="Text"
+           android:textColor="@color/white"
+           android:textSize="@dimen/text_option_size"
+           android:background="@color/purple_500"
+           android:padding="@dimen/padding_inside_tv"
+           android:gravity="center_horizontal"
+           app:layout_constraintBottom_toTopOf="@id/text_option_two"
+           app:layout_constraintEnd_toEndOf="@id/text_option_two"
+           app:layout_constraintStart_toEndOf="@id/tv_option_three"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
